@@ -1,0 +1,2 @@
+# mvinkki
+pvm seurannan automatisointia
