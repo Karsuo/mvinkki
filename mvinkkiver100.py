@@ -34,10 +34,10 @@ def kirjoitin(rivierotin='-----'):
     r=2
     c=1
     for arvo in uusi_taulu2:
-        if arvo != '-----':
+        if arvo != rivierotin:
             sh2.cell(row=r,column=c).value=arvo
             c +=1
-        if arvo == '-----':
+        if arvo == rivierotin:
             r +=1
             c = 1
     wb2.save(vanhat.xlsx)
