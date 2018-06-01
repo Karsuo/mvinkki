@@ -22,7 +22,7 @@ for r in range (2,sh.max_row):
         for c in range(1,sh.max_column+1):     
             d=sh.cell(row=r,column=c).value
             uusi_taulu2.append(d)
-        uusi_taulu2.append(rivierotin)
+        uusi_taulu2.append('-----')
 
 wb2=openpyxl.Workbook()
 wb2.sheetnames
@@ -32,10 +32,10 @@ sh2.title='Vanhat'
 r=2
 c=1
 for arvo in uusi_taulu2:
-    if arvo != rivierotin:
+    if arvo != '-----':
         sh2.cell(row=r,column=c).value=arvo
         c +=1
-    if arvo == rivierotin:
+    if arvo == '-----':
         r +=1
         c = 1
 wb2.save('vanhat.xlsx') 
