@@ -18,7 +18,7 @@ testi_dict={'100':5000,'175':7,'185':4,'190':7,'198':7,'200':5,'205':5,'210':7,'
 
 uusi_taulu2=[] 
 for r in range (2,sh.max_row):
-    if sh['F%s' %r].value+(testi_dict.get(sh['A%s' %r].value[0:2],14)*one_day)<today:
+    if sh['F%s' %r].value+(testi_dict.get(sh['A%s' %r].value[0:3],14)*one_day)<today:
         for c in range(1,sh.max_column+1):     
             d=sh.cell(row=r,column=c).value
             uusi_taulu2.append(d)
